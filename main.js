@@ -1,13 +1,19 @@
-/* Display a three-part message
-    (define message type) */
+// Display a three-part message
 
-//create object of 3 arrays for messages
-
-//create output array
- 
-//create random number function
+// Random number function
 function generateRandomNumber(num) {
     return Math.floor(Math.random()*num)
+
+// Object of 3 arrays for messages
+const randomMessage = {
+    names: [],
+    verbs:[],
+    adverbs[],
+},
+
+// output array
+const message = [];
+
 }
 //create function to display output array
   

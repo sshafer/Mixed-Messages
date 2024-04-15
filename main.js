@@ -6,34 +6,32 @@ function generateRandomNumber(num) {
 };
 // Object of 3 arrays for messages
 const randomMessage = {
-    names: [],
-    verbs:[],
-    adverbs:[],
-},
-// output array
-const message = [];
+    names: ['Albert', 'Betty', 'Carl', 'Debra', 'Earl', 'Fran'],
+    verbs:['ran', 'jumped', 'swam'],
+    adverbs:['fast', 'slow'],
+};
+// Output array
+let message = [];
 
-//fill output array
-for (let value in randomMessage){
-    let choice = generateRandomNumber(randomMessage[choice].length)
-    
-    switch(value) {
-        case 'names':
-            message.push("$randomMessage[value][choice] ")
-            break
-        case 'verbs':
-            message.push("$randomMessage[value][choice] ")
-            break
-        case 'adverbs':
-            message.push("$randomMessage[value][choice].")
-            break
-
-    }
-}
-//create function to display output array
+// Create function to display output array
 function messageOutput(output){
-    const format = message.join
+    for (let value in randomMessage){
+        let choice = generateRandomNumber(randomMessage[value].length)
+        
+        switch(value) {
+            case 'names':
+                message.push(`${randomMessage[value][choice]}`)
+                break
+            case 'verbs':
+                message.push(`${randomMessage[value][choice]}`)
+                break
+            case 'adverbs':
+                message.push(`${randomMessage[value][choice]}.`)
+                break
+        }
+    }
+    const format = message.join(' ')
     console.log(format)
-}
+};
 //call output array function
-messageOutput(message)
+messageOutput(message);
